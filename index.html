@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="index.css">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Restaurant Website</title>
+</head>
+
+<body>
+
+
+  <nav>
+    <ul class="nav-flex-row">
+      <li class="nav-item">
+        <a href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="reservation.html">Reservation</a>
+      </li>
+      <li class="nav-item">
+        <a href="menu.html">Menu</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <section class="section-intro">
+    <header>
+      <h1 style="color:rgb(255, 0, 179);">Fooddddie</h1>
+    </header>
+    <div class="link-to-book-wrapper">
+      <a class="link-to-book" href="reservation.html">Book a table</a>
+    </div>
+  </section>
+
+  <section class="about-section">
+    <article>
+      <h3 style="color: brown; font-size: 30px;">
+        Section for the text why your restaurant is the best.
+      </h3>
+      <p>
+        Unique Cuisine: Emphasize the unique and delicious dishes that your restaurant offers. Explain what sets your
+        cuisine apart from others in the area.
+
+        Quality Ingredients: Mention the use of high-quality, fresh ingredients in your dishes. Customers appreciate
+        knowing that their meals are made with care and top-notch ingredients.
+
+        Skilled Chefs: Highlight the expertise and culinary skills of your chefs. If they have special training or
+        experience, share that as well.
+
+        Ambiance: Describe the restaurant's ambiance and decor. Is it cozy, romantic, family-friendly, or upscale? Paint
+        a picture of what customers can expect when they dine with you.
+
+        Customer Reviews: Share positive reviews and testimonials from satisfied customers. Social proof can be very
+        persuasive.
+
+        Special Features: Mention any unique features your restaurant offers, such as a stunning view, live music,
+        themed nights, or a well-stocked bar.
+
+        Friendly Staff: Highlight your friendly and attentive staff. Great service can make a big difference in a dining
+        experience.
+
+        Cleanliness and Safety: In today's world, cleanliness and safety are paramount. Describe the steps your
+        restaurant takes to ensure a clean and safe dining environment.
+
+        Special Offers: If you have any promotions, discounts, or special offers, be sure to mention them. Everyone
+        loves a good deal.
+
+        Location: Explain why your restaurant's location is convenient or special. Is it in a vibrant neighborhood,
+        close to attractions, or easily accessible?
+      </p>
+    </article>
+  </section>
+
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="img/rachel-park-hrlvr2ZlUNk-unsplash.jpg" class="d-block w-100" alt="food" height="600px">
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row-flex">
+        <div class="flex-column-form">
+          <h3>
+            Make a booking
+          </h3>
+
+          <form name="myform" class="media-centered">
+            <div class="form-group">
+              <p>
+                Please leave your number we will call to make a reservation
+              </p>
+              <input type="text" name="name" class="form-control" placeholder="Enter your name"><br>
+              <input type="number" name="phonenumber" class="form-control" placeholder="Enter your phone number"><br>
+              <button type="submit" class="btn btn-primary" onclick="validation()">Submit</button>
+            </div>
+          </form>
+
+
+        </div>
+
+      </div>
+    </div>
+    <div class="footer">
+      <div class="opening-time">
+        <h3>
+          Opening times
+        </h3>
+        <p>
+          <span>Monday—Thursday: 08:00 — 22:00</span>
+          <span>Friday—Saturday: 09:00 — 23:00 </span>
+          <span>Sunday: 10:00 — 17:00</span>
+        </p>
+      </div>
+      <div class="contact-adress">
+        <h3>
+          Contact
+        </h3>
+        <p>
+          <span>7466842956</span>
+          <span>deepaksighrautela15@gmail.com</span>
+          <span>Almora Uttarakhand</span>
+          <span>Ranikhet</span>
+        </p>
+      </div>
+
+
+
+      <script>
+        function validation() {
+          var name = document.myform.name.value;
+          var number = document.myform.phonenumber.value;
+
+          if (name == "") {
+            alert("Please Enter your name.");
+            return false;
+          }
+
+          if (number == "") {
+            alert("Enter Your Phone number.");
+            return false;
+          }
+
+          if (name != "" && number != "") {
+            alert("Your Information is submitted. We will call you to make a reservation.");
+            return true;
+          }
+
+          return false;
+        }
+      </script>
+
+
+
+</body>
+
+</html>

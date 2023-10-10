@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+  body{
+    margin: 0%;
+    padding: 0%;
+      }
+</style>
+   
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Reservations - Fooddddie</title>
+</head>
+<body>
+  <nav>
+    <ul class="nav-flex-row">
+      <li class="nav-item">
+        <a href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a href="menu.html">Menu</a>
+      </li>
+
+    </ul>
+  </nav>
+  <br>
+  <br>
+    
+
+
+<section id="reservation" class="reservation-section">
+  
+   <hr> <center><h3>Reservations</h3></center><hr>
+    <p>
+        To make a reservation at Fooddddie, please fill out the form below. We will contact you to confirm your booking.
+    </p>
+    <form class="reservation-form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="number" id="phonenumber" class="form-control" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Preferred Date</label>
+            <input type="date" id="date" class="form-control" required>
+        </div>
+        <div class="form-group">
+            <label for="time">Preferred Time</label>
+            <input type="time" id="time" class="form-control" required>
+        </div>
+        <button type="submit" class="btn btn-primary"onclick="validation()">Submit Reservation</button>
+    </form>
+</section>
+
+<script>
+    function validation() {
+    var name = document.getElementById("name").value;
+    var number = document.getElementById("phonenumber").value;
+    var date = document.getElementById("date").value;
+    var time = document.getElementById("time").value;
+        
+        if (name == "") {
+          alert("Please Enter your name.");
+          return false; 
+        }
+        
+        if (number == "") {
+          alert("Enter Your Phone number.");
+          return false;
+        }
+
+        if (date == "") {
+          alert("Enter any date ");
+          return false;
+        }
+
+        if (time == "") {
+          alert("Ente your Time");
+          return false;
+        }
+        
+        if (name != "" && number != "" && date!="" && time!="") {
+          alert("Your reservation is confirmed ");
+          return true; 
+        }
+        
+        return false; 
+    
+    }
+  </script>
+
+</body>
+</html>
